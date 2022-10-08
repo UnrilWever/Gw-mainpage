@@ -1,0 +1,116 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .navBar{
+      position: relative;
+      background: linear-gradient(-45deg, #23d5ab ,#23a6d5,#e73c7e,  #ee7752);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      width: 100%;
+      height: 38vh;
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .avatar{
+      animation-name: fadeIn;
+      animation-duration: 1.5s;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%,-55%);
+      :nth-child(1){
+        border-radius: 50%;
+      }
+    }
+  }
+  .introduction{
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+  }
+  .buttonBox{
+    display: flex;
+    flex: 1;
+    margin-top: 2rem;
+    width: 38rem;
+    justify-content: space-around;
+    list-style: none;
+    
+    :nth-child(n){
+      // width: 6rem;
+      // height: 6rem;
+      // background-color: rgb(152, 152, 152);
+
+      .navButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        background-color: white;
+        border-radius: 50%;
+        border: 0.3rem solid rgb(180, 180, 180);
+        animation-name: fadeInMove;
+        animation-duration: 1s;
+        // transition-property: all;
+
+        // transition-duration: 150ms;
+        // &:hover{
+        //   box-shadow: 0rem 0.2rem 0.5rem;
+        // }
+      }
+      .navButtonLink{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        height: 1rem;
+        width: 6rem;
+        margin-top: 2.3rem;
+        margin-right:2rem ;
+        animation-name: fadeIn;
+        animation-duration: 1.5s;
+        &:hover{
+          h3{
+            text-decoration: underline;
+          }
+        }
+        h3{
+          font-weight: 800;
+          color: rgb(0, 162, 255);
+          margin-top: -2.5rem;
+        }
+        
+      }
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0%;
+  }
+  100%{
+  }
+}
+
+@keyframes fadeInMove {
+  0%{
+    transform: translateY(5rem);
+    opacity: 0%;
+  }
+  100%{
+    transform: translateY(0rem);
+  }
+}

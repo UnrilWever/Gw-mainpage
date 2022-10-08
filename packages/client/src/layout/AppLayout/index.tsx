@@ -1,6 +1,7 @@
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { BackTop } from 'antd';
+import { useRouter } from 'next/router';
 import React, { useContext, useEffect, useMemo } from 'react';
 
 import { Seo } from '@/components/Seo';
@@ -25,6 +26,7 @@ export const AppLayout: React.FC<Iprops> = ({ children, needFooter = true, hasBg
   );
   const customBg = hasBg || (!!systemBg && loaded);
 
+  const { asPath } = useRouter();
   useEffect(() => {
     if (!systemBg) return;
     const img = document.createElement('img');
@@ -40,7 +42,7 @@ export const AppLayout: React.FC<Iprops> = ({ children, needFooter = true, hasBg
   return (
     <div className={style.wrapper}>
       <Seo />
-      <Header setting={setting} tags={tags} pages={pages} hasBg={customBg} />
+      {asPath !== '/home' && <Header setting={setting} tags={tags} pages={pages} hasBg={customBg} />}
       <main className={style.main} style={{ backgroundColor: customBg ? 'transparent' : 'var(--bg-body)' }}>
         {children}
       </main>

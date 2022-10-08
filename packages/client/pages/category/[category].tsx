@@ -12,7 +12,7 @@ import { DoubleColumnLayout } from '@/layout/DoubleColumnLayout';
 import { ArticleProvider } from '@/providers/article';
 import { CategoryProvider } from '@/providers/category';
 
-import { CategoryMenu } from '../home/indexindex';
+import { CategoryMenu } from '../index';
 import style from '../index.module.scss';
 
 interface IProps {

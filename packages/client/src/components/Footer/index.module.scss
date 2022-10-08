@@ -12,26 +12,11 @@
   }
 }
 
-ul.icons {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  margin: 8px 0 16px;
-
-  li {
-    display: inline-block;
-    margin: 0 5px;
-    font-size: 24px;
-    text-align: center;
-    border-radius: 50%;
-
-    &:first-of-type {
-      margin-top: 1px;
-    }
-
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
+.nickName{
+  color: currentColor;
+  font-weight:300;
+  font-size: 0.2rem;
+  user-select: none;
 }
 
 .copyright {

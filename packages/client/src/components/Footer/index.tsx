@@ -32,24 +32,7 @@ const RSS = () => {
 export const Footer = ({ setting, className = '', hasBg = false }) => {
   return (
     <footer className={cls(style.footer, className, hasBg && style.hasBg)}>
-      <ul className={style.icons}>
-        <li>
-          <a aria-label="rss" className={style.github} href="/rss" target="_blank" rel="noopener noreferrer">
-            <RSS />
-          </a>
-        </li>
-        <li>
-          <a
-            aria-label="Github"
-            className={style.github}
-            href="https://github.com/fantasticit/wipi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GithubOutlined />
-          </a>
-        </li>
-      </ul>
+      <h4 className={style.nickName}>—— &nbsp; &nbsp;GREAYWALL&nbsp; |&nbsp; UNRILWEVER&nbsp;&nbsp; ——</h4>
       {setting && setting.systemFooterInfo && (
         <div
           className={style.copyright}
