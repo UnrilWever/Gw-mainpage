@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd /apps/wipi
+cd /apps/gw_blog
 git checkout main
 git pull
 
