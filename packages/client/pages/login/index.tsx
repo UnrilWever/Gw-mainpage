@@ -26,7 +26,7 @@ const Page: NextPage<IProps> = ({ code, from }: IProps) => {
         Router.replace(from);
       })
       .catch((e) => {
-        Router.replace('/');
+        Router.replace('/main');
       });
   }, [code, from, setUser]);
 

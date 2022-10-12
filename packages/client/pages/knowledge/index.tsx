@@ -11,7 +11,7 @@ import { GlobalContext } from '@/context/global';
 import { DoubleColumnLayout } from '@/layout/DoubleColumnLayout';
 import { KnowledgeProvider } from '@/providers/knowledge';
 
-import indexStyle from '../index.module.scss';
+import indexStyle from '../main/index.module.scss';
 
 interface IHomeProps {
   books: IKnowledge[];

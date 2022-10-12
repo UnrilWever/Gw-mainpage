@@ -16,7 +16,7 @@ import style from './index.module.scss';
 
 const NAV_LINKS = [
   {
-    path: '/',
+    path: '/main',
     locale: 'article',
   },
   {
@@ -123,13 +123,13 @@ export const Header = ({ setting, tags, pages, hasBg = false }) => {
         <div className={cls('container')}>
           <div className={style.logo}>
             {/^http/.test(setting.systemLogo) ? (
-              <Link href="/" scroll={false}>
+              <Link href="/main" scroll={false}>
                 <a aria-label="home">
                   <img height="36" src={setting.systemLogo} alt="logo" />
                 </a>
               </Link>
             ) : (
-              <Link href="/" scroll={false}>
+              <Link href="/main" scroll={false}>
                 <a aria-label="home" dangerouslySetInnerHTML={{ __html: setting.systemLogo }}></a>
               </Link>
             )}

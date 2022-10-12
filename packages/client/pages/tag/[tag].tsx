@@ -13,7 +13,7 @@ import { DoubleColumnLayout } from '@/layout/DoubleColumnLayout';
 import { ArticleProvider } from '@/providers/article';
 import { TagProvider } from '@/providers/tag';
 
-import style from '../index.module.scss';
+import style from '../main/index.module.scss';
 
 interface IProps {
   articles: IArticle[];

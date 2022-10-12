@@ -45,7 +45,7 @@ const Article: NextPage<IProps> = ({ article }) => {
   }, [t, article]);
 
   const back = useCallback(() => {
-    Router.push('/');
+    Router.push('/main');
   }, []);
 
   const checkPassWordModal = (

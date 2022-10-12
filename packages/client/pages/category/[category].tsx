@@ -12,8 +12,8 @@ import { DoubleColumnLayout } from '@/layout/DoubleColumnLayout';
 import { ArticleProvider } from '@/providers/article';
 import { CategoryProvider } from '@/providers/category';
 
-import { CategoryMenu } from '../index';
-import style from '../index.module.scss';
+import { CategoryMenu } from '../main/index';
+import style from '../main/index.module.scss';
 
 interface IProps {
   articles: IArticle[];

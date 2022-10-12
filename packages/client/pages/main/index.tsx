@@ -35,14 +35,14 @@ export const CategoryMenu = ({ categories }) => {
       {[
         {
           label: t('all'),
-          path: '/',
+          path: '/main',
         },
         ...categories,
       ].map((category, index) => (
         <Link
           key={index}
           {...(index === 0
-            ? { href: '/' }
+            ? { href: '/main' }
             : {
                 href: '/category/[category]',
                 as: `/category/` + category.value,

@@ -12,7 +12,7 @@ import { GlobalContext } from '@/context/global';
 import { DoubleColumnLayout } from '@/layout/DoubleColumnLayout';
 import { ArticleProvider } from '@/providers/article';
 
-import indexStyle from '../index.module.scss';
+import indexStyle from '../main/index.module.scss';
 import style from './index.module.scss';
 
 interface IProps {

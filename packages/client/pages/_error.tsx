@@ -21,7 +21,7 @@ export const Error404 = () => {
         title="404"
         subTitle={t('pageMissing')}
         extra={
-          <Button type="primary" onClick={() => Router.replace('/')}>
+          <Button type="primary" onClick={() => Router.replace('/main')}>
             {t('backHome')}
           </Button>
         }
@@ -40,7 +40,7 @@ const ServerError = ({ statusCode }) => {
         title={statusCode}
         subTitle={t('serverNotAvaliable')}
         extra={
-          <Button type="primary" onClick={() => Router.replace('/')}>
+          <Button type="primary" onClick={() => Router.replace('/main')}>
             {t('backHome')}
           </Button>
         }

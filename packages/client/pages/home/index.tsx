@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         <div className={styles.buttonContainer}>
           <ul className={styles.buttonList}>
             <li>
-              <Link href="/">
+              <Link href="/main">
                 <Button className={styles.navButtonLink} type="link">
                   <h3>Enter</h3>
                   <h3>Blog</h3>
