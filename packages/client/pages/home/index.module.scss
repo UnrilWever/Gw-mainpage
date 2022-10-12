@@ -39,17 +39,21 @@
     animation-name: fadeIn;
     animation-duration: 1.5s;
   }
-  .buttonBox{
-    display: flex;
+  .buttonContainer{
     flex: 1;
+      .buttonList{
+    display: flex;
     margin-top: 2rem;
     width: 38rem;
     justify-content: space-around;
     list-style: none;
-    
+    flex-wrap: wrap;
+    @media (max-width:638px) {
+      width: 100%;
+    }
     :nth-child(n){
       // width: 6rem;
-      // height: 6rem;
+      height:min-content;
       // background-color: rgb(152, 152, 152);
 
       .navButton{
@@ -58,11 +62,13 @@
         align-items: center;
         width: 6rem;
         height: 6rem;
+        margin-bottom: 2rem;
         background-color: white;
         border-radius: 50%;
         border: 0.3rem solid rgb(180, 180, 180);
         animation-name: fadeInMove;
         animation-duration: 1s;
+
         // transition-property: all;
 
         // transition-duration: 150ms;
@@ -94,6 +100,8 @@
       }
     }
   }
+  }
+
 }
 
 

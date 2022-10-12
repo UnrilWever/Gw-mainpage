@@ -32,58 +32,60 @@ const Home: NextPage = () => {
             I&apos;m GreayWall
           </h1>
         </div>
-        <ul className={styles.buttonBox}>
-          <li>
-            <Link href="/">
-              <Button className={styles.navButtonLink} type="link">
-                <h3>Enter</h3>
-                <h3>Blog</h3>
-              </Button>
-            </Link>
-          </li>
-          <li>
-            <div className={styles.navButton}>
-              <Button
-                shape="circle"
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: '5.5rem',
-                  height: '5.5rem',
-                }}
-                href={externalUrl.github}
-                target="_blank"
-              >
-                <GithubOutlined style={{ marginTop: '0.76rem', fontSize: '5.5rem' }} />
-              </Button>
-            </div>
-          </li>
-          <li>
-            <div className={styles.navButton}>
-              <Button
-                shape="circle"
-                style={{ width: '5.5rem', height: '5.5rem' }}
-                href={externalUrl.juejin}
-                target="_blank"
-              >
-                <Image src="/svg/稀土掘金.svg" width={100} height={100}></Image>
-              </Button>
-            </div>
-          </li>
-          <li>
-            <div className={styles.navButton}>
-              <Button
-                shape="circle"
-                style={{ width: '5.5rem', height: '5.5rem' }}
-                href={externalUrl.zCool}
-                target="_blank"
-              >
-                <Image src="/svg/站酷.svg" width={150} height={150}></Image>
-              </Button>
-            </div>
-          </li>
-        </ul>
+        <div className={styles.buttonContainer}>
+          <ul className={styles.buttonList}>
+            <li>
+              <Link href="/">
+                <Button className={styles.navButtonLink} type="link">
+                  <h3>Enter</h3>
+                  <h3>Blog</h3>
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <div className={styles.navButton}>
+                <Button
+                  shape="circle"
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '5.5rem',
+                    height: '5.5rem',
+                  }}
+                  href={externalUrl.github}
+                  target="_blank"
+                >
+                  <GithubOutlined style={{ marginTop: '0.76rem', fontSize: '5.5rem' }} />
+                </Button>
+              </div>
+            </li>
+            <li>
+              <div className={styles.navButton}>
+                <Button
+                  shape="circle"
+                  style={{ width: '5.5rem', height: '5.5rem' }}
+                  href={externalUrl.juejin}
+                  target="_blank"
+                >
+                  <Image src="/svg/稀土掘金.svg" width={100} height={100}></Image>
+                </Button>
+              </div>
+            </li>
+            <li>
+              <div className={styles.navButton}>
+                <Button
+                  shape="circle"
+                  style={{ width: '5.5rem', height: '5.5rem' }}
+                  href={externalUrl.zCool}
+                  target="_blank"
+                >
+                  <Image src="/svg/站酷.svg" width={150} height={150}></Image>
+                </Button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </main>
     </div>
   );
