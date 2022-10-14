@@ -19,6 +19,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  swcMinify: false, // it should be false by default
 };
 
 module.exports = withPlugins(
