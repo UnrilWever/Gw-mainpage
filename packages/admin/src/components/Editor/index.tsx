@@ -169,6 +169,7 @@ export const Editor: React.FC<IProps> = ({ defaultValue = DEFAULT_MARKDOWN, onCh
           />
         </div>
         <div style={{ width: two ? halfWidth : mode === 'edit' ? 0 : fullWidth }}>
+          {/* 右侧预览 */}
           <Preview value={innerValue} />
         </div>
         <div style={{ width: tocVisible ? '20%' : 0 }}>
