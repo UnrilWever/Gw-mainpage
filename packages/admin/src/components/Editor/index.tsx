@@ -132,7 +132,7 @@ export const Editor: React.FC<IProps> = ({ defaultValue = DEFAULT_MARKDOWN, onCh
               return (
                 <span key={tool.label} className={style.toolWrap}>
                   <Tooltip title={tool.label}>
-                    <tool.content editor={editorRef.current.editor} monaco={editorRef.current.monaco} />
+                    <tool.content editor={editorRef.current.editor} monaco={editorRef.current.monoca} />
                   </Tooltip>
                 </span>
               );
