@@ -4,6 +4,7 @@ import { Emoji } from './Emoji';
 import { File } from './File';
 import { Iframe } from './Iframe';
 import { Image } from './Image';
+import { Magimg } from './Magimg';
 import { Video } from './Video';
 
 export const toolbar = [
@@ -38,6 +39,13 @@ export const toolbar = [
   {
     label: '文件库',
     content: ({ editor, monaco }) => <File editor={editor} monaco={monaco} />,
+    getAction: () => () => {
+      return undefined;
+    },
+  },
+  {
+    label: '放大图片',
+    content: ({ editor, monaco }) => <Magimg editor={editor} monaco={monaco} />,
     getAction: () => () => {
       return undefined;
     },
