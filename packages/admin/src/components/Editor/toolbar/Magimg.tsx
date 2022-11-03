@@ -41,7 +41,6 @@ export const Magimg = ({ editor, monaco }) => {
     >
       <Tooltip title={'放大图片'}>
         <svg
-          t="1667400253599"
           className="icon"
           viewBox="0 0 1024 1024"
           version="1.1"

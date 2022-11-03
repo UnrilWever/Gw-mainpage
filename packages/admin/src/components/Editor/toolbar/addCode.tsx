@@ -24,7 +24,6 @@ export const AddCode = ({ editor, monaco }) => {
     <Tooltip title={'添加代码块'}>
       <svg
         onClick={insert}
-        t="1667441750541"
         className="icon"
         viewBox="0 0 1024 1024"
         version="1.1"
