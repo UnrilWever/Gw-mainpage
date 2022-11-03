@@ -2,6 +2,7 @@ import { ArticleCarousel } from '@components/ArticleCarousel';
 import { ArticleList } from '@components/ArticleList';
 import { Footer } from '@components/Footer';
 import { Tags } from '@components/Tags';
+import { Menu } from 'antd';
 import cls from 'classnames';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -31,7 +32,7 @@ export const CategoryMenu = ({ categories }) => {
   const { asPath } = router;
 
   return (
-    <>
+    <Menu mode="horizontal">
       {[
         {
           label: t('all'),
@@ -39,28 +40,29 @@ export const CategoryMenu = ({ categories }) => {
         },
         ...categories,
       ].map((category, index) => (
-        <Link
-          key={index}
-          {...(index === 0
-            ? { href: '/main' }
-            : {
-                href: '/category/[category]',
-                as: `/category/` + category.value,
-              })}
-          shallow={false}
-        >
-          <a
-            className={cls({
-              [style.active]:
-                index === 0 ? asPath === category.path : asPath.replace('/category/', '') === category.value,
-            })}
-            aria-label={category.label}
+        <Menu.Item key={index}>
+          <Link
+            {...(index === 0
+              ? { href: '/main' }
+              : {
+                  href: '/category/[category]',
+                  as: `/category/` + category.value,
+                })}
+            shallow={false}
           >
-            <span>{category.label}</span>
-          </a>
-        </Link>
+            <a
+              className={cls({
+                [style.active]:
+                  index === 0 ? asPath === category.path : asPath.replace('/category/', '') === category.value,
+              })}
+              aria-label={category.label}
+            >
+              <span>{category.label}</span>
+            </a>
+          </Link>
+        </Menu.Item>
       ))}
-    </>
+    </Menu>
   );
 };
 
