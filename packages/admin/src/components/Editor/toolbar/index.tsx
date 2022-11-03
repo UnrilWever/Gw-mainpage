@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { AddCode } from './AddCode';
 import { Emoji } from './Emoji';
 import { File } from './File';
 import { Iframe } from './Iframe';
@@ -46,6 +47,13 @@ export const toolbar = [
   {
     label: '放大图片',
     content: ({ editor, monaco }) => <Magimg editor={editor} monaco={monaco} />,
+    getAction: () => () => {
+      return undefined;
+    },
+  },
+  {
+    label: '添加代码块',
+    content: ({ editor, monaco }) => <AddCode editor={editor} monaco={monaco} />,
     getAction: () => () => {
       return undefined;
     },
